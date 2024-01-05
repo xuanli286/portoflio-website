@@ -27,7 +27,7 @@
         A third-year student in SMU, pursuing a degree in Information Systems with a dual track in Business Analytics and Digitalisation & Cloud Solutions. I'm fueled by a strong passion for data, actively seeking opportunities to expand my experience in the field. 
       </p>
       <p class="mt-5">
-        Eager to take on roles in data or business analysis, I'm committed to advancing my skills and contributing to impactful projects.
+        Eager to take on roles in <span :class="{'text-blue font-semibold': isAbout}">data or business analysis</span>, I'm committed to advancing my skills and contributing to impactful projects.
       </p>
     </div>
 
@@ -83,6 +83,28 @@
 
     <div class="mt-10">
       <p class="text-purple text-xl font-medium mb-3">Projects</p>
+      <div class="flex border-b-2 border-purple-25">
+        <div 
+          class="mr-5 hover:border-b-2 hover:border-grey hover:font-medium pb-2 cursor-pointer"
+          :class="{'border-b-2 border-grey font-medium' : isMachine}"
+          @click="selectProject"
+        >
+          Machine Learning
+        </div>
+        <div 
+          class="mr-5 hover:border-b-2 hover:border-grey hover:font-medium pb-2 cursor-pointer"
+          :class="{'border-b-2 border-grey font-medium' : !isMachine}"
+          @click="selectProject"
+        >
+          Web Development
+        </div>
+      </div>
+      <div v-if="isMachine" class="mt-3">
+        Machine
+      </div>
+      <div v-else class="mt-3">
+        Web
+      </div>
     </div>
   </div>
 </template>
@@ -92,6 +114,11 @@ import { ref } from 'vue';
 
 const isAbout = ref(false);
 const isResume = ref(false);
+const isMachine = ref(false);
+
+function selectProject() {
+  isMachine.value = !isMachine.value;
+}
 </script>
 
 <style>
