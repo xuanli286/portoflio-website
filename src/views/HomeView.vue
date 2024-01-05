@@ -1,8 +1,8 @@
 <template>
-  <div class="mx-auto max-w-screen-sm py-20 px-10 text-grey text-justify text-sm leading-relaxed">
+  <div class="mx-auto max-w-screen-sm py-20 md:px-10 px-5 text-grey md:text-justify text-sm leading-relaxed">
     <div class="flex">
       <img class="rounded-full w-36 border-3 border-grey-25" src="@/assets/me.jpg" alt="">
-      <div class="my-auto pl-10">
+      <div class="my-auto md:pl-10 pl-2">
         <p class="text-2xl font-bold text-blue">Low Xuanli</p>
         <p>Aspiring Business Analyst</p>
         <div class="flex mt-6">
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="mt-10" @mouseenter="isAbout=true" @mouseleave="isAbout=false">
+    <div class="mt-10 text-justify" @mouseenter="isAbout=true" @mouseleave="isAbout=false">
       <p class="text-purple text-xl font-medium mb-5">About</p>
       <p :class="{'animate-pulse': isAbout}">Hi, I'm Xuanli.</p> 
       <p class="mt-5">
@@ -74,11 +74,15 @@
             <li>Eased process of weekly project status update by designing a template utilising Confluence to allow for collective and coherent updates across stakeholders and project team</li>
           </ul>
           <div class="flex items-center mt-5">
-            <img class="w-[49px] mr-1" src="@/assets/icons/jira.svg" alt="">
-            <img class="w-24" src="@/assets/icons/confluence.svg" alt="">
+            <img class="w-[50px] mr-1" src="@/assets/icons/jira.svg" alt="">
+            <img class="w-[98px]" src="@/assets/icons/confluence.svg" alt="">
           </div>
         </div>
       </a>
+    </div>
+
+    <div class="mt-10">
+      <p class="text-purple text-xl font-medium mb-3">Projects</p>
     </div>
   </div>
 </template>
