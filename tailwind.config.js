@@ -20,8 +20,10 @@ module.exports = {
       },
       black: "#231f19",
       purple: "#baa7a7",
-      grey: "#726c65",
-      
+      grey: {
+        DEFAULT: "#726c65",
+        25: "#f0f0ef",
+      },
     },
     fontFamily: {
       mono: ["Consolas"],
