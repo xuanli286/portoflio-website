@@ -235,9 +235,26 @@
         </div>
       </div>
 
-      <a class="mt-8 rounded-md border-pink border-2 p-1 mr-2 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105" href="https://github.com/xuanli286" target="_blank" @mouseenter="isFullProjects=true" @mouseleave="isFullProjects=false">
+      <a class="mt-3 rounded-md border-pink border-2 p-1 mr-2 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105" href="https://github.com/xuanli286" target="_blank" @mouseenter="isFullProjects=true" @mouseleave="isFullProjects=false">
         <p class="mr-1">Full list of projects on <span class="font-semibold">Github</span></p>
         <img class="w-2" :style="{ transform: isFullProjects ? 'translateY(-2px)' : 'translateY(0)' }" src="@/assets/icons/window.svg" alt="">
+      </a>
+    </div>
+
+    <div class="mt-40">
+      <img class="w-11/12 mx-auto" src="@/assets/contact.svg" alt="Contact">
+      <p class="mt-4">Feel free to email me at <u>xuanli.low.2021@scis.smu.edu.sg</u> or connect on socials!</p>
+      <a class="mt-8 mx-auto rounded-full shadow-lg bg-pink text-white w-48 p-3 flex items-center justify-center hover:shadow-pink transition-transform hover:scale-105" href="mailto:xuanli.low.2021@scis.smu.edu.sg">
+        <p class="mr-2">Drop me an email</p>
+        <img class="w-4" src="@/assets/icons/mail.svg" alt="Email">
+      </a>
+      <a class="flex items-center mt-4 mr-auto" href="https://www.linkedin.com/in/lowxuanli" target="_blank" @mouseenter="isLinkedin=true" @mouseleave="isLinkedin=false">
+        <img class="w-5 mr-2" src="@/assets/icons/linkedin_outline.svg" alt="Linkedin">
+        <p :class="{'underline decoration-wavy font-medium text-pink' : isLinkedin}">Linkedin</p>
+      </a>
+      <a class="flex items-center mt-4 mr-auto" href="https://github.com/xuanli286" target="_blank" @mouseenter="isGithub=true" @mouseleave="isGithub=false">
+        <img class="w-5 mr-2" src="@/assets/icons/github_outline.svg" alt="Github">
+        <p :class="{'underline decoration-wavy font-medium text-pink' : isGithub}">Github</p>
       </a>
     </div>
   </div>
@@ -263,6 +280,8 @@ const isGoldmanVideo = ref(false);
 const isSbrp = ref(false);
 const isSbrpGithub = ref(false);
 const isFullProjects = ref(false);
+const isLinkedin = ref(false);
+const isGithub = ref(false);
 
 function selectProject() {
   isMachine.value = !isMachine.value;
