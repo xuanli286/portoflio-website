@@ -244,7 +244,7 @@
     <div class="mt-40">
       <img class="w-11/12 mx-auto" src="@/assets/contact.svg" alt="Contact">
       <p class="mt-4">Feel free to email me at <u>xuanli.low.2021@scis.smu.edu.sg</u> or connect on socials!</p>
-      <a class="mt-8 mx-auto rounded-full shadow-lg bg-pink text-white w-48 p-3 flex items-center justify-center hover:shadow-pink transition-transform hover:scale-105" href="mailto:xuanli.low.2021@scis.smu.edu.sg">
+      <a class="mt-4 mx-auto rounded-full shadow-lg bg-pink text-white w-48 p-3 flex items-center justify-center hover:shadow-pink transition-transform hover:scale-105" href="mailto:xuanli.low.2021@scis.smu.edu.sg">
         <p class="mr-2">Drop me an email</p>
         <img class="w-4" src="@/assets/icons/mail.svg" alt="Email">
       </a>
