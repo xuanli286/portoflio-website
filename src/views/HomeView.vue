@@ -143,8 +143,8 @@
             A dashboard for users to visualise trends of World Happiness and possible factors influencing it
           </p>
           <div class="flex items-center mb-2">
-            <img class="w-24 mr-1" src="@/assets/icons/tableau.svg" alt="Tableau">
-            <img class="w-[30px]" src="@/assets/icons/d3.svg" alt="d3.js">
+            <img class="w-24 mr-1" src="@/assets/icons/tableau.png" alt="Tableau">
+            <img class="w-[30px]" src="@/assets/icons/d3.png" alt="d3.js">
           </div>
           <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
@@ -165,7 +165,7 @@
           <p class="mb-1">
             Detect and filter biased or fraudulent reviews found on its site using tree-based algorithms, such as Decision Tree and Random Forest
           </p>
-          <img class="w-[78px] mr-1 mb-2" src="@/assets/icons/sas.svg" alt="SAS">
+          <img class="w-[78px] mr-1 mb-2" src="@/assets/icons/sas.png" alt="SAS">
           <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isBeer" class="h-60" src="@/assets/projects/beer_advocates/frontpage.png" alt="">
             <img v-else class="h-60" src="@/assets/projects/beer_advocates/output.png" alt="">
@@ -192,8 +192,8 @@
             An application that aids investment advisors and finance professionals in analysing investment portfolios' performance and making informed investment decisions.
           </p>
           <div class="flex items-center mb-2">
-            <img class="w-24 mr-1" src="@/assets/icons/tableau.svg" alt="Tableau">
-            <img class="w-[30px]" src="@/assets/icons/d3.svg" alt="d3.js">
+            <img class="w-24 mr-1" src="@/assets/icons/tableau.png" alt="Tableau">
+            <img class="w-[30px]" src="@/assets/icons/d3.png" alt="d3.js">
           </div>
           <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
