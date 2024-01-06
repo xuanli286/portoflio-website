@@ -51,9 +51,9 @@
             <li>Integrated Stripe API to ease real-time payment processing with webhook</li>
           </ul>
           <div class="flex items-center mt-5">
-            <img class="w-20 mr-1" src="@/assets/icons/django.svg" alt="">
-            <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="">
-            <img class="w-[88px]" src="@/assets/icons/postgre.svg" alt="">
+            <img class="w-20 mr-1" src="@/assets/icons/django.svg" alt="Django">
+            <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
+            <img class="w-[88px]" src="@/assets/icons/postgre.svg" alt="PostgreSQL">
           </div>
         </div>
       </a>
@@ -74,8 +74,8 @@
             <li>Eased process of weekly project status update by designing a template utilising Confluence to allow for collective and coherent updates across stakeholders and project team</li>
           </ul>
           <div class="flex items-center mt-5">
-            <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="">
-            <img class="w-[98px]" src="@/assets/icons/confluence.png" alt="">
+            <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="Jira">
+            <img class="w-[98px]" src="@/assets/icons/confluence.png" alt="Confluence">
           </div>
         </div>
       </a>
@@ -107,11 +107,11 @@
             <div class="ml-auto flex items-center">
               <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/sentiment-tunes" target="_blank" @mouseenter="isSentimentGithub=true" @mouseleave="isSentimentGithub=false">
                 <img v-if="isSentiment && isSentimentGithub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
-                <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="">
+                <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
               </a>
               <a class="transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyEai2m0s/FjI05Y6sdGNaUoChKTdPaA/view?utm_content=DAFyEai2m0s&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isSentimentSlide=true" @mouseleave="isSentimentSlide=false">
                 <img v-if="isSentiment && isSentimentSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="">
-                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="">
+                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="Slidedeck">
               </a>
             </div>
           </div>
@@ -134,8 +134,8 @@
                 <img v-else class="w-5" src="@/assets/icons/redirect.svg" alt="">
               </a>
               <a class="transition-transform hover:scale-110" href="/World Happiness Report.pdf" target="_blank" @mouseenter="isWorldPdf=true" @mouseleave="isWorldPdf=false">
-                <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="">                
-                <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="">
+                <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="PDF">                
+                <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="PDF">
               </a>
             </div>
           </div>
@@ -157,8 +157,8 @@
             <p class="font-semibold text-base" :class="{'text-pink':isBeer}">BeerAdvocates</p>
             <div class="ml-auto flex items-center">
               <a class="mr-3 transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyaJ53H18/EepiHl9XqJ56PStQxXzd8Q/view?utm_content=DAFyaJ53H18&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isBeerSlide=true" @mouseleave="isBeerSlide=false">
-                <img v-if="isBeer && isBeerSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="">
-                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="">
+                <img v-if="isBeer && isBeerSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="Slidedeck">
+                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="Slidedeck">
               </a>
             </div>
           </div>
@@ -174,17 +174,13 @@
       </div>
 
       <div v-else class="mt-3">
-        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isGoldman=true" @mouseleave="isGoldman=false">
           <div class="flex items-center mb-2">
-            <p class="font-semibold text-base" :class="{'text-pink':isWorld}">Goldman Sachs Portfolio Analyser</p>
+            <p class="font-semibold text-base" :class="{'text-pink':isGoldman}">Goldman Sachs Portfolio Analyser</p>
             <div class="ml-auto flex items-center">
-              <a class="mr-3 transition-transform hover:scale-110" href="https://va-t3-world-happiness-d3-dashboard.netlify.app/" target="_blank" @mouseenter="isWorldRedirect=true" @mouseleave="isWorldRedirect=false">
-                <img v-if="isWorld && isWorldRedirect" class="w-5" src="@/assets/icons/redirect_hover.svg" alt="">
-                <img v-else class="w-5" src="@/assets/icons/redirect.svg" alt="">
-              </a>
-              <a class="transition-transform hover:scale-110" href="/World Happiness Report.pdf" target="_blank" @mouseenter="isWorldPdf=true" @mouseleave="isWorldPdf=false">
-                <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="">                
-                <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="">
+              <a class="transition-transform hover:scale-110" href="https://github.com/xuanli286/IS442-FRONTEND" target="_blank" @mouseenter="isGoldmanGitHub=true" @mouseleave="isGoldmanGitHub=false">
+                <img v-if="isGoldman && isGoldmanGitHub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
+                <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
               </a>
             </div>
           </div>
@@ -192,12 +188,14 @@
             An application that aids investment advisors and finance professionals in analysing investment portfolios' performance and making informed investment decisions.
           </p>
           <div class="flex items-center mb-2">
-            <img class="w-24 mr-1" src="@/assets/icons/tableau.png" alt="Tableau">
-            <img class="w-[30px]" src="@/assets/icons/d3.png" alt="d3.js">
+            <img class="w-[81px] mr-1" src="@/assets/icons/spring.svg" alt="SpringBoot">
+            <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
+            <img class="w-[75px] mr-1" src="@/assets/icons/firestore.svg" alt="Firebase">
+            <img class="w-16" src="@/assets/icons/redis.svg" alt="Redis Cache">
           </div>
-          <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
-            <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
-            <img v-else class="h-60" src="@/assets/projects/world_happiness/dashboard.png" alt="">
+          <div class="px-2 w-full h-60 rounded-md bg-navy hidden md:flex items-center justify-center transition duration-1500">
+            <img v-if="!isGoldman" class="h-60" src="@/assets/projects/goldman_sachs/login.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/goldman_sachs/analysis.png" alt="">
           </div>
         </div>
       </div>
@@ -219,6 +217,8 @@ const isWorldRedirect = ref(false);
 const isWorldPdf = ref(false);
 const isBeer = ref(false);
 const isBeerSlide = ref(false);
+const isGoldman = ref(false);
+const isGoldmanGitHub = ref(false);
 
 function selectProject() {
   isMachine.value = !isMachine.value;

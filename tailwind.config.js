@@ -33,6 +33,7 @@ module.exports = {
         DEFAULT: "#faf6ec",
         50: "#fcf9f3",
       },
+      navy: "#192e47",
     },
     fontFamily: {
       mono: ["Consolas"],
