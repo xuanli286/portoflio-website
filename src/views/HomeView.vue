@@ -74,8 +74,8 @@
             <li>Eased process of weekly project status update by designing a template utilising Confluence to allow for collective and coherent updates across stakeholders and project team</li>
           </ul>
           <div class="flex items-center mt-5">
-            <img class="w-[50px] mr-1" src="@/assets/icons/jira.svg" alt="">
-            <img class="w-[98px]" src="@/assets/icons/confluence.svg" alt="">
+            <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="">
+            <img class="w-[98px]" src="@/assets/icons/confluence.png" alt="">
           </div>
         </div>
       </a>
