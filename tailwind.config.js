@@ -29,7 +29,10 @@ module.exports = {
         50: "#9c9893",
         25: "#f0f0ef",
       },
-      yellow: "#faf6ec",
+      yellow: {
+        DEFAULT: "#faf6ec",
+        50: "#fcf9f3",
+      },
     },
     fontFamily: {
       mono: ["Consolas"],

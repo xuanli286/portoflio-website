@@ -33,13 +33,13 @@
 
     <div class="mt-10">
       <p class="text-purple text-xl font-medium mb-3">Experience</p>
-      <a href="https://www.marinachain.io/" class="grid grid-cols-3 gap-2 py-1 hover:bg-yellow">
+      <a href="https://www.marinachain.io/" class="grid grid-cols-3 gap-2 p-1 rounded-md hover:bg-yellow">
         <div class="col-span-1">
           <p class="text-grey-50">May 2023 - Aug 2023</p>
         </div>
         <div class="col-span-2">
             <div class="flex items-center">
-            <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/icons/marinachain_logo.png" alt="">
+            <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/marinachain_logo.png" alt="">
             <div>
               <p class="font-semibold">Full Stack Software Engineer Intern</p>
               <p class="font-medium">MarinaChain</p>
@@ -57,13 +57,13 @@
           </div>
         </div>
       </a>
-      <a href="https://www.hsbc.com/" class="grid grid-cols-3 gap-2 py-1 hover:bg-yellow mt-3">
+      <a href="https://www.hsbc.com/" class="grid grid-cols-3 gap-2 p-1 rounded-md hover:bg-yellow mt-3">
         <div class="col-span-1">
           <p class="text-grey-50">Sep 2020 - Feb 2021</p>
         </div>
         <div class="col-span-2">
             <div class="flex items-center">
-            <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/icons/hsbc_logo.png" alt="">
+            <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hsbc_logo.png" alt="">
             <div>
               <p class="font-semibold">Intern under HOST/COO Office</p>
               <p class="font-medium">HSBC</p>
@@ -89,7 +89,7 @@
           :class="{'border-b-2 border-grey font-medium' : isMachine}"
           @click="selectProject"
         >
-          Machine Learning
+          Data Analytics
         </div>
         <div 
           class="mr-5 hover:border-b-2 hover:border-grey hover:font-medium pb-2 cursor-pointer"
@@ -100,7 +100,76 @@
         </div>
       </div>
       <div v-if="isMachine" class="mt-3">
-        Machine
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isSentiment=true" @mouseleave="isSentiment=false">
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-base" :class="{'text-pink':isSentiment}">Sentiment Tunes</p>
+            <div class="ml-auto flex items-center">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/sentiment-tunes" target="_blank" @mouseenter="isSentimentGithub=true" @mouseleave="isSentimentGithub=false">
+                <img v-if="isSentiment && isSentimentGithub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
+                <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="">
+              </a>
+              <a class="transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyEai2m0s/FjI05Y6sdGNaUoChKTdPaA/view?utm_content=DAFyEai2m0s&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isSentimentSlide=true" @mouseleave="isSentimentSlide=false">
+                <img v-if="isSentiment && isSentimentSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="">
+                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="mb-1">
+            A Spotify music reccomendation system using Cosine Similarity, incorporating multi-label emotion detection with Geneva Emotional Music Scales, as well as emotion extraction using Long Short-Term Memory (LSTM) networks, NRC Lexicon, and OpenAI
+          </p>
+          <img class="w-20 mb-2" src="@/assets/icons/python.svg" alt="">
+          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+            <img v-if="!isSentiment" class="h-60" src="@/assets/projects/sentiment_tunes/login.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/sentiment_tunes/recommendation.png" alt="">
+          </div>
+        </div>
+
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-base" :class="{'text-pink':isWorld}">World Happiness Dashboard</p>
+            <div class="ml-auto flex items-center">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://va-t3-world-happiness-d3-dashboard.netlify.app/" target="_blank" @mouseenter="isWorldRedirect=true" @mouseleave="isWorldRedirect=false">
+                <img v-if="isWorld && isWorldRedirect" class="w-5" src="@/assets/icons/redirect_hover.svg" alt="">
+                <img v-else class="w-5" src="@/assets/icons/redirect.svg" alt="">
+              </a>
+              <a class="transition-transform hover:scale-110" href="/World Happiness Report.pdf" target="_blank" @mouseenter="isWorldPdf=true" @mouseleave="isWorldPdf=false">
+                <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="">                
+                <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="mb-1">
+            A dashboard for users to visualise trends of World Happiness and possible factors influencing it
+          </p>
+          <div class="flex items-center mb-2">
+            <img class="w-24 mr-1" src="@/assets/icons/tableau.svg" alt="Tableau">
+            <img class="w-[30px]" src="@/assets/icons/d3.svg" alt="d3.js">
+          </div>
+          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+            <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/world_happiness/dashboard.png" alt="">
+          </div>
+        </div>
+
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4" @mouseenter="isBeer=true" @mouseleave="isBeer=false">
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-base" :class="{'text-pink':isBeer}">BeerAdvocates</p>
+            <div class="ml-auto flex items-center">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyaJ53H18/EepiHl9XqJ56PStQxXzd8Q/view?utm_content=DAFyaJ53H18&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isBeerSlide=true" @mouseleave="isBeerSlide=false">
+                <img v-if="isBeer && isBeerSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="">
+                <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="mb-1">
+            Detect and filter biased or fraudulent reviews found on its site using tree-based algorithms, such as Decision Tree and Random Forest
+          </p>
+          <img class="w-20 mr-1 mb-2" src="@/assets/icons/sas.svg" alt="SAS">
+          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+            <img v-if="!isBeer" class="h-60" src="@/assets/projects/beer_advocates/frontpage.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/beer_advocates/output.png" alt="">
+          </div>
+        </div>
       </div>
       <div v-else class="mt-3">
         Web
@@ -114,7 +183,15 @@ import { ref } from 'vue';
 
 const isAbout = ref(false);
 const isResume = ref(false);
-const isMachine = ref(false);
+const isMachine = ref(true);
+const isSentiment = ref(false);
+const isSentimentGithub = ref(false);
+const isSentimentSlide = ref(false);
+const isWorld = ref(false);
+const isWorldRedirect = ref(false);
+const isWorldPdf = ref(false);
+const isBeer = ref(false);
+const isBeerSlide = ref(false);
 
 function selectProject() {
   isMachine.value = !isMachine.value;
