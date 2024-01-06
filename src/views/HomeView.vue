@@ -99,6 +99,7 @@
           Web Development
         </div>
       </div>
+
       <div v-if="isMachine" class="mt-3">
         <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isSentiment=true" @mouseleave="isSentiment=false">
           <div class="flex items-center mb-2">
@@ -118,13 +119,13 @@
             A Spotify music reccomendation system using Cosine Similarity, incorporating multi-label emotion detection with Geneva Emotional Music Scales, as well as emotion extraction using Long Short-Term Memory (LSTM) networks, NRC Lexicon, and OpenAI
           </p>
           <img class="w-20 mb-2" src="@/assets/icons/python.svg" alt="">
-          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+          <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isSentiment" class="h-60" src="@/assets/projects/sentiment_tunes/login.png" alt="">
             <img v-else class="h-60" src="@/assets/projects/sentiment_tunes/recommendation.png" alt="">
           </div>
         </div>
 
-        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
           <div class="flex items-center mb-2">
             <p class="font-semibold text-base" :class="{'text-pink':isWorld}">World Happiness Dashboard</p>
             <div class="ml-auto flex items-center">
@@ -145,7 +146,7 @@
             <img class="w-24 mr-1" src="@/assets/icons/tableau.svg" alt="Tableau">
             <img class="w-[30px]" src="@/assets/icons/d3.svg" alt="d3.js">
           </div>
-          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+          <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
             <img v-else class="h-60" src="@/assets/projects/world_happiness/dashboard.png" alt="">
           </div>
@@ -164,15 +165,41 @@
           <p class="mb-1">
             Detect and filter biased or fraudulent reviews found on its site using tree-based algorithms, such as Decision Tree and Random Forest
           </p>
-          <img class="w-20 mr-1 mb-2" src="@/assets/icons/sas.svg" alt="SAS">
-          <div class="px-2 w-full h-60 rounded-md bg-black flex items-center justify-center transition duration-1500">
+          <img class="w-[78px] mr-1 mb-2" src="@/assets/icons/sas.svg" alt="SAS">
+          <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isBeer" class="h-60" src="@/assets/projects/beer_advocates/frontpage.png" alt="">
             <img v-else class="h-60" src="@/assets/projects/beer_advocates/output.png" alt="">
           </div>
         </div>
       </div>
+
       <div v-else class="mt-3">
-        Web
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-base" :class="{'text-pink':isWorld}">Goldman Sachs Portfolio Analyser</p>
+            <div class="ml-auto flex items-center">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://va-t3-world-happiness-d3-dashboard.netlify.app/" target="_blank" @mouseenter="isWorldRedirect=true" @mouseleave="isWorldRedirect=false">
+                <img v-if="isWorld && isWorldRedirect" class="w-5" src="@/assets/icons/redirect_hover.svg" alt="">
+                <img v-else class="w-5" src="@/assets/icons/redirect.svg" alt="">
+              </a>
+              <a class="transition-transform hover:scale-110" href="/World Happiness Report.pdf" target="_blank" @mouseenter="isWorldPdf=true" @mouseleave="isWorldPdf=false">
+                <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="">                
+                <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <p class="mb-1">
+            An application that aids investment advisors and finance professionals in analysing investment portfolios' performance and making informed investment decisions.
+          </p>
+          <div class="flex items-center mb-2">
+            <img class="w-24 mr-1" src="@/assets/icons/tableau.svg" alt="Tableau">
+            <img class="w-[30px]" src="@/assets/icons/d3.svg" alt="d3.js">
+          </div>
+          <div class="px-2 w-full h-60 rounded-md bg-black hidden md:flex items-center justify-center transition duration-1500">
+            <img v-if="!isWorld" class="h-60" src="@/assets/projects/world_happiness/frontpage.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/world_happiness/dashboard.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
