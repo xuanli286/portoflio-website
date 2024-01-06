@@ -75,7 +75,7 @@
           </ul>
           <div class="flex items-center mt-5">
             <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="Jira">
-            <img class="w-[98px]" src="@/assets/icons/confluence.png" alt="Confluence">
+            <img class="w-[99px]" src="@/assets/icons/confluence.png" alt="Confluence">
           </div>
         </div>
       </a>
@@ -178,9 +178,13 @@
           <div class="flex items-center mb-2">
             <p class="font-semibold text-base" :class="{'text-pink':isGoldman}">Goldman Sachs Portfolio Analyser</p>
             <div class="ml-auto flex items-center">
-              <a class="transition-transform hover:scale-110" href="https://github.com/xuanli286/IS442-FRONTEND" target="_blank" @mouseenter="isGoldmanGitHub=true" @mouseleave="isGoldmanGitHub=false">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/IS442-FRONTEND" target="_blank" @mouseenter="isGoldmanGitHub=true" @mouseleave="isGoldmanGitHub=false">
                 <img v-if="isGoldman && isGoldmanGitHub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
                 <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
+              </a>
+              <a class="transition-transform hover:scale-110" href="https://youtu.be/0lhDVV1ZNJc?si=joPOfVlIp_qPtsR7" target="_blank" @mouseenter="isGoldmanVideo=true" @mouseleave="isGoldmanVideo=false">
+                <img v-if="isGoldman && isGoldmanVideo" class="w-7" src="@/assets/icons/youtube_hover.svg" alt="Youtube">
+                <img v-else class="w-7" src="@/assets/icons/youtube.svg" alt="Youtube">
               </a>
             </div>
           </div>
@@ -193,12 +197,48 @@
             <img class="w-[75px] mr-1" src="@/assets/icons/firestore.svg" alt="Firebase">
             <img class="w-16" src="@/assets/icons/redis.svg" alt="Redis Cache">
           </div>
-          <div class="px-2 w-full h-60 rounded-md bg-navy hidden md:flex items-center justify-center transition duration-1500">
+          <div class="px-2 w-full h-60 rounded-md bg-yellow hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isGoldman" class="h-60" src="@/assets/projects/goldman_sachs/login.png" alt="">
             <img v-else class="h-60" src="@/assets/projects/goldman_sachs/analysis.png" alt="">
           </div>
         </div>
+
+        <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isSbrp=true" @mouseleave="isSbrp=false">
+          <div class="flex items-center mb-2">
+            <p class="font-semibold text-base" :class="{'text-pink':isSbrp}">Skill Based Role Portal (SBRP)</p>
+            <div class="ml-auto flex items-center">
+              <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/IS212-g4t1" target="_blank" @mouseenter="isSbrpGithub=true" @mouseleave="isSbrpGithub=false">
+                <img v-if="isSbrp && isSbrpGithub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
+                <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
+              </a>
+            </div>
+          </div>
+          <p class="mb-1">
+            A website which facilitates staff applications, allowing Managers and Directors to review applicant skills, find suitable candidates, and empowering HR to create role listings and perform managerial functions.
+          </p>
+          <div class="flex items-center mb-2">
+            <img class="w-[71px] mr-1" src="@/assets/icons/flask.svg" alt="Flask">
+            <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
+            <img class="w-[72px] mr-1" src="@/assets/icons/mysql.svg" alt="MySQL">
+            <img class="w-[39px] mr-1" src="@/assets/icons/aws.svg" alt="AWS">
+            <img class="w-20 mr-1" src="@/assets/icons/docker.svg" alt="Docker">
+            <img class="w-[88px]" src="@/assets/icons/selenium.svg" alt="Selenium">
+          </div>
+          <div class="flex items-center mb-2">
+            <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="Jira">
+            <img class="w-[99px]" src="@/assets/icons/confluence.png" alt="Confluence">
+          </div>
+          <div class="px-2 w-full h-60 rounded-md bg-yellow hidden md:flex items-center justify-center transition duration-1500">
+            <img v-if="!isSbrp" class="h-60" src="@/assets/projects/sbrp/login.png" alt="">
+            <img v-else class="h-60" src="@/assets/projects/sbrp/candidates.png" alt="">
+          </div>
+        </div>
       </div>
+
+      <a class="mt-8 rounded-md border-pink border-2 p-1 mr-2 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105" href="https://github.com/xuanli286" target="_blank" @mouseenter="isFullProjects=true" @mouseleave="isFullProjects=false">
+        <p class="mr-1">Full list of projects on <span class="font-semibold">Github</span></p>
+        <img class="w-2" :style="{ transform: isFullProjects ? 'translateY(-2px)' : 'translateY(0)' }" src="@/assets/icons/window.svg" alt="">
+      </a>
     </div>
   </div>
 </template>
@@ -219,6 +259,10 @@ const isBeer = ref(false);
 const isBeerSlide = ref(false);
 const isGoldman = ref(false);
 const isGoldmanGitHub = ref(false);
+const isGoldmanVideo = ref(false);
+const isSbrp = ref(false);
+const isSbrpGithub = ref(false);
+const isFullProjects = ref(false);
 
 function selectProject() {
   isMachine.value = !isMachine.value;
