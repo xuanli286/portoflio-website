@@ -216,15 +216,15 @@
           <p class="mb-1">
             A website which facilitates staff applications, allowing Managers and Directors to review applicant skills, find suitable candidates, and empowering HR to create role listings and perform managerial functions.
           </p>
-          <div class="flex flex-wrap items-center mb-2">
-            <img class="w-[71px] mr-1" src="@/assets/icons/flask.svg" alt="Flask">
-            <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
-            <img class="w-[72px] mr-1" src="@/assets/icons/mysql.svg" alt="MySQL">
-            <img class="w-[39px] mr-1" src="@/assets/icons/aws.svg" alt="AWS">
-            <img class="w-20 mr-1" src="@/assets/icons/docker.svg" alt="Docker">
-            <img class="w-[88px]" src="@/assets/icons/selenium.svg" alt="Selenium">
-            <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="Jira">
-            <img class="w-[99px]" src="@/assets/icons/confluence.png" alt="Confluence">
+          <div class="flex flex-wrap items-center mb-1">
+            <img class="w-[71px] mr-1 mb-1" src="@/assets/icons/flask.svg" alt="Flask">
+            <img class="w-14 mr-1 mb-1" src="@/assets/icons/vue.svg" alt="Vue">
+            <img class="w-[72px] mr-1 mb-1" src="@/assets/icons/mysql.svg" alt="MySQL">
+            <img class="w-[39px] mr-1 mb-1" src="@/assets/icons/aws.svg" alt="AWS">
+            <img class="w-20 mr-1 mb-1" src="@/assets/icons/docker.svg" alt="Docker">
+            <img class="w-[88px] mr-1 mb-1" src="@/assets/icons/selenium.svg" alt="Selenium">
+            <img class="w-[50px] mr-1 mb-1" src="@/assets/icons/jira.png" alt="Jira">
+            <img class="w-[99px] mb-1" src="@/assets/icons/confluence.png" alt="Confluence">
           </div>
           <div class="px-2 w-full h-60 rounded-md bg-yellow hidden md:flex items-center justify-center transition duration-1500">
             <img v-if="!isSbrp" class="h-60" src="@/assets/projects/sbrp/login.png" alt="">
