@@ -191,7 +191,7 @@
           <p class="mb-1">
             An application that aids investment advisors and finance professionals in analysing investment portfolios' performance and making informed investment decisions.
           </p>
-          <div class="flex items-center mb-2">
+          <div class="flex flex-wrap items-center mb-2">
             <img class="w-[81px] mr-1" src="@/assets/icons/spring.svg" alt="SpringBoot">
             <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
             <img class="w-[75px] mr-1" src="@/assets/icons/firestore.svg" alt="Firebase">
@@ -216,15 +216,13 @@
           <p class="mb-1">
             A website which facilitates staff applications, allowing Managers and Directors to review applicant skills, find suitable candidates, and empowering HR to create role listings and perform managerial functions.
           </p>
-          <div class="flex items-center mb-2">
+          <div class="flex flex-wrap items-center mb-2">
             <img class="w-[71px] mr-1" src="@/assets/icons/flask.svg" alt="Flask">
             <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
             <img class="w-[72px] mr-1" src="@/assets/icons/mysql.svg" alt="MySQL">
             <img class="w-[39px] mr-1" src="@/assets/icons/aws.svg" alt="AWS">
             <img class="w-20 mr-1" src="@/assets/icons/docker.svg" alt="Docker">
             <img class="w-[88px]" src="@/assets/icons/selenium.svg" alt="Selenium">
-          </div>
-          <div class="flex items-center mb-2">
             <img class="w-[50px] mr-1" src="@/assets/icons/jira.png" alt="Jira">
             <img class="w-[99px]" src="@/assets/icons/confluence.png" alt="Confluence">
           </div>
