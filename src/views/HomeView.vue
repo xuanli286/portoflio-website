@@ -1,12 +1,12 @@
 <template>
   <div class="mx-auto max-w-screen-sm py-20 md:px-10 px-5 text-grey md:text-justify text-sm leading-relaxed">
     <label for="switch" class="relative">
-      <input type="checkbox" id="switch" name="switch" hidden class="peer">
-      <span class="absolute inset-0 h-5 w-5 my-auto left-0.5 rounded-full bg-white shadow transition-transform duration-300 peer-checked:translate-x-6 flex items-center justify-center" @click="isDarkMode=false">
+      <input type="checkbox" id="switch" name="switch" hidden class="peer" @click="isDarkMode=!isDarkMode">
+      <span class="absolute inset-0 h-5 w-5 my-auto left-0.5 rounded-full bg-white shadow transition-transform duration-300 peer-checked:translate-x-6 flex items-center justify-center">
         <img v-if="isDarkMode" class="w-3.5 mx-auto" src="@/assets/icons/moon_hover.svg" alt="">
         <img v-else class="w-3.5 mx-auto" src="@/assets/icons/sun_hover.svg" alt="">
       </span>
-      <span class="w-12 h-6 border flex items-center jsutify-center rounded-full bg-grey-25 transition duration-300 peer-checked:bg-pink border-pink" @click="isDarkMode=true">
+      <span class="w-12 h-6 border flex items-center jsutify-center rounded-full bg-grey-25 transition duration-300 peer-checked:bg-pink border-pink">
         <img class="w-3.5 mx-auto mr-1" src="@/assets/icons/sun.svg" alt="">
         <img  class="w-3.5 ml-auto mr-1" src="@/assets/icons/moon.svg" alt="">
       </span>
