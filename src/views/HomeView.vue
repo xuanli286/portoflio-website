@@ -1,5 +1,17 @@
 <template>
   <div class="mx-auto max-w-screen-sm py-20 md:px-10 px-5 text-grey md:text-justify text-sm leading-relaxed">
+    <label for="switch" class="relative">
+      <input type="checkbox" id="switch" name="switch" hidden class="peer">
+      <span class="absolute inset-0 h-5 w-5 my-auto left-0.5 rounded-full bg-white shadow transition-transform duration-300 peer-checked:translate-x-6 flex items-center justify-center" @click="isDarkMode=false">
+        <img v-if="isDarkMode" class="w-3.5 mx-auto" src="@/assets/icons/moon_hover.svg" alt="">
+        <img v-else class="w-3.5 mx-auto" src="@/assets/icons/sun_hover.svg" alt="">
+      </span>
+      <span class="w-12 h-6 border flex items-center jsutify-center rounded-full bg-grey-25 transition duration-300 peer-checked:bg-pink border-pink" @click="isDarkMode=true">
+        <img class="w-3.5 mx-auto mr-1" src="@/assets/icons/sun.svg" alt="">
+        <img  class="w-3.5 ml-auto mr-1" src="@/assets/icons/moon.svg" alt="">
+      </span>
+    </label>
+
     <div class="flex">
       <img class="rounded-full w-36 border-3 border-grey-25" src="@/assets/me.jpg" alt="">
       <div class="my-auto md:pl-10 pl-2">
@@ -242,7 +254,7 @@
     <div class="mt-40">
       <img class="w-11/12 mx-auto" src="@/assets/contact.svg" alt="Contact">
       <p class="mt-4">Feel free to email me at <u>xuanli.low.2021@scis.smu.edu.sg</u> or connect on socials!</p>
-      <a class="mt-4 mx-auto rounded-full shadow-lg bg-pink text-white w-48 p-3 flex items-center justify-center hover:shadow-pink transition-transform hover:scale-105" href="mailto:xuanli.low.2021@scis.smu.edu.sg">
+      <a class="mt-4 mx-auto rounded-full shadow-lg bg-pink text-white-50 w-48 p-3 flex items-center justify-center hover:shadow-pink transition-transform hover:scale-105" href="mailto:xuanli.low.2021@scis.smu.edu.sg">
         <p class="mr-2">Drop me an email</p>
         <img class="w-4" src="@/assets/icons/mail.svg" alt="Email">
       </a>
@@ -261,6 +273,7 @@
 <script setup>
 import { ref } from 'vue';
 
+const isDarkMode = ref(false);
 const isAbout = ref(false);
 const isResume = ref(false);
 const isMachine = ref(true);
@@ -287,7 +300,7 @@ function selectProject() {
 </script>
 
 <style>
-  .custom-list {
-    list-style-image: url('@/assets/icons/bullet.svg');
-  }
+.custom-list {
+  list-style-image: url('@/assets/icons/bullet.svg');
+}
 </style>
