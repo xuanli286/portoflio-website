@@ -21,7 +21,11 @@ module.exports = {
         DEFAULT: "#ff94a3",
         50: "#dbaa9a",
       },
-      black: "#231f19",
+      black: {
+        DEFAULT: "#231f19",
+        50: "#333333",
+        25: "#3D3D3D",
+      },
       purple: {
         DEFAULT: "#baa7a7",
         50: "#CD94FF",

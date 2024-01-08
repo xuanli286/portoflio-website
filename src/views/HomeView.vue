@@ -3,7 +3,10 @@
     class="bg-container"
     :class="{'bg-black': isDarkMode}"
   >
-    <div class="mx-auto max-w-screen-sm py-20 md:px-10 px-5 text-grey md:text-justify text-sm leading-relaxed">
+    <div 
+      class="mx-auto max-w-screen-sm py-20 md:px-10 px-5 md:text-justify text-sm leading-relaxed"
+      :class="[isDarkMode ? 'text-beige' : 'text-grey']"
+    >
       <div class="flex justify-end">
         <label for="switch" class="relative">
           <input type="checkbox" id="switch" name="switch" hidden class="peer" @click="isDarkMode=!isDarkMode">
@@ -25,7 +28,8 @@
           <div class="flex mt-6">
             <a href="/Resume_Low_Xuanli.pdf" target="_blank" class="rounded-full border-pink border-2 p-1 mr-2 w-24 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105 cursor-pointer" @mouseenter="isResume=true" @mouseleave="isResume=false">
               <p class="mr-1 font-medium">Resume</p>
-              <img class="w-2" :style="{ transform: isResume ? 'translateY(-2px)' : 'translateY(0)' }" src="@/assets/icons/window.svg" alt="">
+              <img v-if="!isDarkMode" class="w-2" :style="{ transform: isResume ? 'translateY(-2px)' : 'translateY(0)' }" src="@/assets/icons/window.svg" alt="">
+              <img v-else class="w-2" :style="{ transform: isResume ? 'translateY(-2px)' : 'translateY(0)' }" src="@/assets/icons/window_white.svg" alt="">
             </a>
             <a href="https://www.linkedin.com/in/lowxuanli" target="_blank" class="w-9 h-9 mr-2 bg-pink rounded-full flex items-center justify-center shadow-lg hover:shadow-pink cursor-pointer">
               <img class="w-4" src="@/assets/icons/linkedin.svg" alt="">
@@ -48,7 +52,10 @@
       </div>
       <div class="mt-10">
         <p class="text-purple text-xl font-medium mb-3">Experience</p>
-        <a href="https://www.marinachain.io/" class="grid grid-cols-3 gap-2 p-1 rounded-md hover:bg-yellow">
+        <a href="https://www.marinachain.io/" 
+          class="grid grid-cols-3 gap-2 p-1 rounded-md"
+          :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
+        >
           <div class="col-span-1">
             <p class="text-grey-50">May 2023 - Aug 2023</p>
           </div>
@@ -72,7 +79,10 @@
             </div>
           </div>
         </a>
-        <a href="https://www.hsbc.com/" class="grid grid-cols-3 gap-2 p-1 rounded-md hover:bg-yellow mt-3">
+        <a href="https://www.hsbc.com/" 
+          class="grid grid-cols-3 gap-2 p-1 rounded-md mt-3"
+          :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
+        >
           <div class="col-span-1">
             <p class="text-grey-50">Sep 2020 - Feb 2021</p>
           </div>
@@ -99,31 +109,37 @@
         <p class="text-purple text-xl font-medium mb-3">Projects</p>
         <div class="flex border-b-2 border-purple-25">
           <div
-            class="mr-5 hover:border-b-2 hover:border-grey hover:font-medium pb-2 cursor-pointer"
-            :class="{'border-b-2 border-grey font-medium' : isMachine}"
+            class="mr-5 hover:border-b-2 hover:font-medium pb-2 cursor-pointer"
+            :class="{'border-b-2 font-medium' : isMachine, 'border-beige hover:border-beige' : isMachine && isDarkMode, 'border-grey hover:border-grey' : isMachine && !isDarkMode}"
             @click="selectProject"
           >
             Data Analytics
           </div>
           <div
-            class="mr-5 hover:border-b-2 hover:border-grey hover:font-medium pb-2 cursor-pointer"
-            :class="{'border-b-2 border-grey font-medium' : !isMachine}"
+            class="mr-5 hover:border-b-2 hover:font-medium pb-2 cursor-pointer"
+            :class="{'border-b-2 font-medium' : !isMachine, 'border-beige hover:border-beige' : !isMachine && isDarkMode, 'border-grey hover:border-grey' : !isMachine && !isDarkMode}"
             @click="selectProject"
           >
             Web Development
           </div>
         </div>
         <div v-if="isMachine" class="mt-3">
-          <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isSentiment=true" @mouseleave="isSentiment=false">
+          <div 
+            class="w-full rounded-md px-1 py-4 mb-3"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isSentiment=true" @mouseleave="isSentiment=false"
+          >
             <div class="flex items-center mb-2">
-              <p class="font-semibold text-base" :class="{'text-pink':isSentiment}">Sentiment Tunes</p>
+              <p class="font-semibold text-base" :class="{'text-pink' : isSentiment, 'text-beige' : isDarkMode}">Sentiment Tunes</p>
               <div class="ml-auto flex items-center">
                 <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/sentiment-tunes" target="_blank" @mouseenter="isSentimentGithub=true" @mouseleave="isSentimentGithub=false">
                   <img v-if="isSentiment && isSentimentGithub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
-                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
+                  <img v-else-if="isDarkMode" class="w-6" src="@/assets/icons/github-alt_white.svg" alt="Github">
+                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="Github">
                 </a>
                 <a class="transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyEai2m0s/FjI05Y6sdGNaUoChKTdPaA/view?utm_content=DAFyEai2m0s&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isSentimentSlide=true" @mouseleave="isSentimentSlide=false">
                   <img v-if="isSentiment && isSentimentSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="">
+                  <img v-else-if="isDarkMode" class="w-7" src="@/assets/icons/slides_white.svg" alt="Slidedeck">
                   <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="Slidedeck">
                 </a>
               </div>
@@ -137,16 +153,20 @@
               <img v-else class="h-60" src="@/assets/projects/sentiment_tunes/recommendation.png" alt="">
             </div>
           </div>
-          <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isWorld=true" @mouseleave="isWorld=false">
+          <div class="w-full rounded-md px-1 py-4 mb-3"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isWorld=true" @mouseleave="isWorld=false">
             <div class="flex items-center mb-2">
               <p class="font-semibold text-base" :class="{'text-pink':isWorld}">World Happiness Dashboard</p>
               <div class="ml-auto flex items-center">
                 <a class="mr-3 transition-transform hover:scale-110" href="https://va-t3-world-happiness-d3-dashboard.netlify.app/" target="_blank" @mouseenter="isWorldRedirect=true" @mouseleave="isWorldRedirect=false">
                   <img v-if="isWorld && isWorldRedirect" class="w-5" src="@/assets/icons/redirect_hover.svg" alt="">
+                  <img v-else-if="isDarkMode" class="w-5" src="@/assets/icons/redirect_white.svg" alt="">
                   <img v-else class="w-5" src="@/assets/icons/redirect.svg" alt="">
                 </a>
                 <a class="transition-transform hover:scale-110" href="/World Happiness Report.pdf" target="_blank" @mouseenter="isWorldPdf=true" @mouseleave="isWorldPdf=false">
                   <img v-if="isWorld && isWorldPdf" class="w-[18px]" src="@/assets/icons/pdf_hover.svg" alt="PDF">
+                  <img v-else-if="isDarkMode" class="w-[18px]" src="@/assets/icons/pdf_white.svg" alt="PDF">
                   <img v-else class="w-[18px]" src="@/assets/icons/pdf.svg" alt="PDF">
                 </a>
               </div>
@@ -163,12 +183,16 @@
               <img v-else class="h-60" src="@/assets/projects/world_happiness/dashboard.png" alt="">
             </div>
           </div>
-          <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4" @mouseenter="isBeer=true" @mouseleave="isBeer=false">
+          <div 
+            class="w-full rounded-md px-1 py-4"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isBeer=true" @mouseleave="isBeer=false">
             <div class="flex items-center mb-2">
               <p class="font-semibold text-base" :class="{'text-pink':isBeer}">BeerAdvocates</p>
               <div class="ml-auto flex items-center">
-                <a class="mr-3 transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyaJ53H18/EepiHl9XqJ56PStQxXzd8Q/view?utm_content=DAFyaJ53H18&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isBeerSlide=true" @mouseleave="isBeerSlide=false">
+                <a class="transition-transform hover:scale-110" href="https://www.canva.com/design/DAFyaJ53H18/EepiHl9XqJ56PStQxXzd8Q/view?utm_content=DAFyaJ53H18&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" @mouseenter="isBeerSlide=true" @mouseleave="isBeerSlide=false">
                   <img v-if="isBeer && isBeerSlide" class="w-7" src="@/assets/icons/slides_hover.svg" alt="Slidedeck">
+                  <img v-else-if="isDarkMode" class="w-7" src="@/assets/icons/slides_white.svg" alt="Slidedeck">
                   <img v-else class="w-7" src="@/assets/icons/slides.svg" alt="Slidedeck">
                 </a>
               </div>
@@ -184,16 +208,21 @@
           </div>
         </div>
         <div v-else class="mt-3">
-          <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isGoldman=true" @mouseleave="isGoldman=false">
+          <div class="w-full rounded-md px-1 py-4 mb-3"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isGoldman=true" @mouseleave="isGoldman=false"
+          >
             <div class="flex items-center mb-2">
               <p class="font-semibold text-base" :class="{'text-pink':isGoldman}">Goldman Sachs Portfolio Analyser</p>
               <div class="ml-auto flex items-center">
                 <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/IS442-FRONTEND" target="_blank" @mouseenter="isGoldmanGitHub=true" @mouseleave="isGoldmanGitHub=false">
                   <img v-if="isGoldman && isGoldmanGitHub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
-                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
+                  <img v-else-if="isDarkMode" src="@/assets/icons/github-alt_white.svg" alt="Github">
+                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="Github">
                 </a>
                 <a class="transition-transform hover:scale-110" href="https://youtu.be/0lhDVV1ZNJc?si=joPOfVlIp_qPtsR7" target="_blank" @mouseenter="isGoldmanVideo=true" @mouseleave="isGoldmanVideo=false">
                   <img v-if="isGoldman && isGoldmanVideo" class="w-7" src="@/assets/icons/youtube_hover.svg" alt="Youtube">
+                  <img v-else-if="isDarkMode" class="w-7" src="@/assets/icons/youtube_white.svg" alt="Youtube">
                   <img v-else class="w-7" src="@/assets/icons/youtube.svg" alt="Youtube">
                 </a>
               </div>
@@ -212,13 +241,16 @@
               <img v-else class="h-60" src="@/assets/projects/goldman_sachs/analysis.png" alt="">
             </div>
           </div>
-          <div class="bg-yellow hover:bg-yellow-50 w-full rounded-md px-1 py-4 mb-3" @mouseenter="isSbrp=true" @mouseleave="isSbrp=false">
+          <div class="w-full rounded-md px-1 py-4 mb-3"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isSbrp=true" @mouseleave="isSbrp=false">
             <div class="flex items-center mb-2">
               <p class="font-semibold text-base" :class="{'text-pink':isSbrp}">Skill Based Role Portal (SBRP)</p>
               <div class="ml-auto flex items-center">
-                <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/xuanli286/IS212-g4t1" target="_blank" @mouseenter="isSbrpGithub=true" @mouseleave="isSbrpGithub=false">
+                <a class="transition-transform hover:scale-110" href="https://github.com/xuanli286/IS212-g4t1" target="_blank" @mouseenter="isSbrpGithub=true" @mouseleave="isSbrpGithub=false">
                   <img v-if="isSbrp && isSbrpGithub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
-                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="GitHub">
+                  <img v-else-if="isDarkMode" class="w-6" src="@/assets/icons/github-alt_white.svg" alt="Github">
+                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="Github">
                 </a>
               </div>
             </div>
