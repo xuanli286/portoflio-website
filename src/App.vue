@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-beige min-h-screen font-['Poppins']">
+  <div class="min-h-screen font-['Poppins']">
     <HomeView/>
   </div>
 </template>
