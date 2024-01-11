@@ -336,7 +336,6 @@ function selectProject() {
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false;
-    console.log(isLoading.value)
   }, 2000);
 });
 </script>
