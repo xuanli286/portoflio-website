@@ -1,5 +1,9 @@
 <template>
+  <div class="bg-beige w-full min-h-screen flex justify-center items-center" v-if="isLoading">
+    <div class="panda"></div>
+  </div>
   <div 
+    v-else
     class="bg-container"
     :class="{'bg-black': isDarkMode}"
   >
@@ -299,8 +303,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
+const isLoading = ref(true);
 const isDarkMode = ref(false);
 const isAbout = ref(false);
 const isResume = ref(false);
@@ -327,9 +332,40 @@ localStorage.setItem('dark_mode', isDarkMode);
 function selectProject() {
   isMachine.value = !isMachine.value;
 }
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false;
+    console.log(isLoading.value)
+  }, 2000);
+});
 </script>
 
 <style>
+.panda {
+  background: url(@/assets/panda.png);
+  width: 80px;
+  height: 113px;
+  animation: walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+}
+@keyframes walk {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 960px;
+  }
+}
+@keyframes forward {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(1200px);
+  }
+}
+
 .bg-container {
   position: relative;
   overflow: hidden;
