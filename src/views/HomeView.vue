@@ -72,9 +72,10 @@
               </div>
             </div>
             <ul class="custom-list mt-5 ml-5">
-              <li class="mb-1">Implemented vessel management feature</li>
-              <li>Created Auth0 embedded login to enhance user authentication and leveraged Management API for secure password reset</li>
-              <li>Integrated Stripe API to ease real-time payment processing with webhook</li>
+              <li class="mb-1">Implemented vessel management feature with Django REST Framework and Vue to streamline operations</li>
+              <li>Enhanced user authentication through Auth0 embedded login to ensure a secure login and leveraged Management API
+for a robust password reset mechanism</li>
+              <li>Integrated Stripe API to optimise real-time payment processing with webhook for a seamless user experience</li>
             </ul>
             <div class="flex items-center mt-5">
               <img class="w-20 mr-1" src="@/assets/icons/django.svg" alt="Django">
