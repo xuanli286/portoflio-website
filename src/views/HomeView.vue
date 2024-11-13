@@ -28,7 +28,7 @@
         <img class="rounded-full w-36 border-3 border-grey-25" src="@/assets/me.jpg" alt="">
         <div class="my-auto md:pl-10 pl-2">
           <p class="text-2xl font-bold text-blue">Low Xuanli</p>
-          <p>Aspiring Business Analyst</p>
+          <p>Aspiring Data Analyst</p>
           <div class="flex mt-6">
             <a href="/Resume_Low_Xuanli.pdf" target="_blank" class="rounded-full border-pink border-2 p-1 mr-2 w-24 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105 cursor-pointer" @mouseenter="isResume=true" @mouseleave="isResume=false">
               <p class="mr-1 font-medium">Resume</p>
@@ -51,7 +51,7 @@
           A third-year student in SMU, pursuing a degree in Information Systems with a dual track in Business Analytics and Digitalisation & Cloud Solutions. I'm fueled by a strong passion for data, actively seeking opportunities to expand my experience in the field.
         </p>
         <p class="mt-5">
-          Eager to take on roles in <span :class="{'text-blue font-semibold': isAbout}">data or business analysis</span>, I'm committed to advancing my skills and contributing to impactful projects.
+          Eager to take on roles in <span :class="{'text-blue font-semibold': isAbout}">data analysis</span>, I'm committed to advancing my skills and contributing to impactful projects.
         </p>
       </div>
       <div class="mt-10">
@@ -310,7 +310,7 @@ const isLoading = ref(true);
 const isDarkMode = ref(false);
 const isAbout = ref(false);
 const isResume = ref(false);
-const isMachine = ref(true);
+const isMachine = ref(false);
 const isSentiment = ref(false);
 const isSentimentGithub = ref(false);
 const isSentimentSlide = ref(false);
