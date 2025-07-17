@@ -28,7 +28,7 @@
         <img class="rounded-full w-36 border-3 border-grey-25" src="@/assets/me.jpg" alt="">
         <div class="my-auto md:pl-10 pl-2">
           <p class="text-2xl font-bold text-blue">Low Xuanli</p>
-          <p>Aspiring Infrastructure Engineer</p>
+          <p>Aspiring Data/Infrastructure Engineer</p>
           <div class="flex mt-6">
             <a href="/Resume_Low_Xuanli.pdf" target="_blank" class="rounded-full border-pink border-2 p-1 mr-2 w-24 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105 cursor-pointer" @mouseenter="isResume=true" @mouseleave="isResume=false">
               <p class="mr-1 font-medium">Resume</p>
@@ -51,8 +51,8 @@
           A fresh graduate from SMU, holding a degree in Information Systems with a dual track in Business Analytics and Digitalisation & Cloud Solutions. 
         </p>
         <p class="mt-3">
-          Eager to take on roles in <span :class="{'text-blue font-semibold': true}">infrastructure engineering</span>, I'm committed to advancing my skills and contributing to impactful projects.
-            Infrastructure isn't just backend to me — it's the backbone that makes great products possible!
+          Eager to take on roles in <span :class="{'text-blue font-semibold': true}">data/infrastructure engineering</span>, I'm committed to advancing my skills, and building scalable and fault tolerant systems.
+          Infrastructure isn't just backend to me — it's the backbone that makes great products possible!
         </p>
       </div>
       <div class="mt-10">
@@ -62,13 +62,69 @@
           :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
         >
           <div class="col-span-1">
+            <p class="text-grey-50">Jan 2025 - Jan 2026</p>
+          </div>
+          <div class="col-span-2">
+              <div class="flex items-center">
+                <a href="https://www.bankofsingapore.com/">
+                  <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/bos_logo.png" alt="">
+                </a>
+              <div>
+                <p class="font-semibold">HR Data Engineer</p>
+                <a href="https://www.bankofsingapore.com/" class="font-medium">Bank of Singapore</a>
+              </div>
+            </div>
+            <ul class="custom-list mt-5 ml-5">
+              <li class="mb-1">Implemented data pipelines using SQL, VBS, and Blue Prism to streamline extraction and transformation of data from MyHR and Enterprise Big Data Platform (EBP), delivering timely headcount reports to stakeholders</li>
+              <li>Developed and deployed a Streamlit dashboard in a collaboration with Data Hub, implementing role-based access controls to PII data and eliminating 3 hours per month in manual reporting for department coordinators</li>
+            </ul>
+            <div class="flex items-center mt-5">
+              <img class="w-9 mr-1" src="@/assets/icons/sql.svg" alt="SQL">
+              <img class="w-20 mr-1" src="@/assets/icons/python.svg" alt="Python">
+              <img class="w-20 mr-1" src="@/assets/icons/blueprism.svg" alt="Blue Prism">
+              <img class="w-20" src="@/assets/icons/bitbucket.svg" alt="Bitbucket">
+            </div>
+          </div>
+        </div>
+        <div 
+          class="grid grid-cols-3 gap-2 p-1 rounded-md mt-3"
+          :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
+        >
+          <div class="col-span-1">
             <p class="text-grey-50">May 2023 - Aug 2023</p>
           </div>
           <div class="col-span-2">
               <div class="flex items-center">
-              <a href="https://www.marinachain.io/">
-                <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/marinachain_logo.png" alt="">
-              </a>
+                <a href="https://www.hdb.gov.sg/">
+                  <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hdb_logo.png" alt="">
+                </a>
+              <div>
+                <p class="font-semibold">Data Analyst Intern</p>
+                <a href="https://www.hdb.gov.sg/" class="font-medium">Housing & Development Board</a>
+              </div>
+            </div>
+            <ul class="custom-list mt-5 ml-5">
+              <li class="mb-1">Automated the Town Council Management Report (TCMR) process from manual Excel reporting to dashboards in PowerBI, reducing the overall time taken for report generation from approximately 2 hours to 30 minutes</li>
+              <li>Utilised Python to extract and clean data from PDF and Excel for trend analysis in Power BI, employing Power Query and DAX measures to identify prominent issues requiring closer monitoring based on indicators like estate cleanliness, maintenance, etc.</li>
+            </ul>
+            <div class="flex items-center mt-5">
+              <img class="w-20 mr-1" src="@/assets/icons/python.svg" alt="Python">
+              <img class="w-20" src="@/assets/icons/powerbi.svg" alt="Power BI">
+            </div>
+          </div>
+        </div>
+        <div 
+          class="grid grid-cols-3 gap-2 p-1 rounded-md mt-3"
+          :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
+        >
+          <div class="col-span-1">
+            <p class="text-grey-50">May 2023 - Aug 2023</p>
+          </div>
+          <div class="col-span-2">
+              <div class="flex items-center">
+                <a href="https://www.marinachain.io/">
+                  <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/marinachain_logo.png" alt="">
+                </a>
               <div>
                 <p class="font-semibold">Full Stack Software Engineer Intern</p>
                 <a href="https://www.marinachain.io/" class="font-medium">MarinaChain</a>
@@ -83,7 +139,8 @@ for a robust password reset mechanism</li>
             <div class="flex items-center mt-5">
               <img class="w-20 mr-1" src="@/assets/icons/django.svg" alt="Django">
               <img class="w-14 mr-1" src="@/assets/icons/vue.svg" alt="Vue">
-              <img class="w-[88px]" src="@/assets/icons/postgre.svg" alt="PostgreSQL">
+              <img class="w-[88px] mr-1" src="@/assets/icons/postgre.svg" alt="PostgreSQL">
+              <img class="w-20" src="@/assets/icons/bitbucket.svg" alt="Bitbucket">
             </div>
           </div>
         </div>
@@ -96,9 +153,9 @@ for a robust password reset mechanism</li>
           </div>
           <div class="col-span-2">
               <div class="flex items-center">
-              <a href="https://www.hsbc.com/">
-                <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hsbc_logo.png" alt="">
-              </a>
+                <a href="https://www.hsbc.com/">
+                  <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hsbc_logo.png" alt="">
+                </a>
               <div>
                 <p class="font-semibold">Intern under Digital Business Services</p>
                 <a href="https://www.hsbc.com/">
