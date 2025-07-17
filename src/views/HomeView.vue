@@ -279,6 +279,46 @@ for a robust password reset mechanism</li>
         <div v-else class="mt-3">
           <div class="w-full rounded-md px-1 py-4 mb-3"
             :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
+            @mouseenter="isIqma=true" @mouseleave="isIqma=false"
+          >
+            <div class="flex items-center mb-2">
+              <p class="font-semibold text-base" :class="{'text-pink':isIqma}">iQMA Skills Builder</p>
+              <div class="ml-auto flex items-center">
+                <a class="mr-3 transition-transform hover:scale-110" href="https://github.com/FYP-2024-IQMA/fyp2024" target="_blank" @mouseenter="isIqmaGitHub=true" @mouseleave="isIqmaGitHub=false">
+                  <img v-if="isIqma && isIqmaGitHub" class="w-6" src="@/assets/icons/github-alt_hover.svg" alt="">
+                  <img v-else-if="isDarkMode" src="@/assets/icons/github-alt_white.svg" alt="Github">
+                  <img v-else class="w-6" src="@/assets/icons/github-alt.svg" alt="Github">
+                </a>
+                <a class="transition-transform hover:scale-110" href="https://youtu.be/qiESkFuMMOc?feature=shared" target="_blank" @mouseenter="isIqmaVideo=true" @mouseleave="isIqmaVideo=false">
+                  <img v-if="isIqma && isIqmaVideo" class="w-7" src="@/assets/icons/youtube_hover.svg" alt="Youtube">
+                  <img v-else-if="isDarkMode" class="w-7" src="@/assets/icons/youtube_white.svg" alt="Youtube">
+                  <img v-else class="w-7" src="@/assets/icons/youtube.svg" alt="Youtube">
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center mb-1">
+              <img class="w-5" src="@/assets/projects/iqma/medal.svg" alt="">
+              <p class="ml-2 font-medium text-pink">1st Runner-up for DELL Technologies Academy Cloud Native Award</p>
+            </div>
+            <p class="mb-1">
+              A mobile application that equips employees with soft skills through gamification, a personal chatbot, and bite-sized lessons to boost performance and leadership potential.
+              A near real-time clickstream analytics pipeline publishes 30+ daily events to RabbitMQ, enabling user insights in Tableau to drive data-informed improvements for its application.
+            </p>
+            <div class="flex flex-wrap items-center mb-2">
+              <img class="w-[68px] mr-1" src="@/assets/icons/react_native.svg" alt="React Native">
+              <img class="w-[66px] mr-1" src="@/assets/icons/type_script.svg" alt="Type Script">
+              <img class="w-24 mr-1" src="@/assets/icons/supabase.png" alt="Type Script">
+              <img class="w-[39px] mr-1" src="@/assets/icons/aws.svg" alt="AWS">
+              <img class="w-[110px] mr-1" src="@/assets/icons/terraform.png" alt="Terraform">
+              <img class="w-24 mr-1" src="@/assets/icons/tableau.png" alt="Tableau">
+            </div>
+            <div class="px-2 w-full h-60 rounded-md bg-yellow hidden md:flex items-center justify-center transition duration-1500">
+              <img v-if="!isIqma" class="h-60" src="@/assets/projects/iqma/mobile.png" alt="">
+              <img v-else class="h-60" src="@/assets/projects/iqma/architecture.png" alt="">
+            </div>
+          </div>
+          <div class="w-full rounded-md px-1 py-4 mb-3"
+            :class="[isDarkMode ? 'bg-black-50 hover:bg-black-25' : 'bg-yellow hover:bg-yellow-50']"
             @mouseenter="isGoldman=true" @mouseleave="isGoldman=false"
           >
             <div class="flex items-center mb-2">
@@ -383,6 +423,9 @@ const isWorldRedirect = ref(false);
 const isWorldPdf = ref(false);
 const isBeer = ref(false);
 const isBeerSlide = ref(false);
+const isIqma = ref(false);
+const isIqmaGitHub = ref(false);
+const isIqmaVideo = ref(false);
 const isGoldman = ref(false);
 const isGoldmanGitHub = ref(false);
 const isGoldmanVideo = ref(false);
