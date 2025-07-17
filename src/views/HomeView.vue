@@ -28,7 +28,7 @@
         <img class="rounded-full w-36 border-3 border-grey-25" src="@/assets/me.jpg" alt="">
         <div class="my-auto md:pl-10 pl-2">
           <p class="text-2xl font-bold text-blue">Low Xuanli</p>
-          <p>Aspiring Data Analyst</p>
+          <p>Aspiring Infrastructure Engineer</p>
           <div class="flex mt-6">
             <a href="/Resume_Low_Xuanli.pdf" target="_blank" class="rounded-full border-pink border-2 p-1 mr-2 w-24 flex items-center justify-center shadow-lg hover:shadow-pink transition-transform hover:scale-105 cursor-pointer" @mouseenter="isResume=true" @mouseleave="isResume=false">
               <p class="mr-1 font-medium">Resume</p>
@@ -48,15 +48,16 @@
         <p class="text-purple text-xl font-medium mb-5">About</p>
         <p :class="{'animate-pulse': isAbout}">Hi, I'm Xuanli.</p>
         <p class="mt-5">
-          A third-year student in SMU, pursuing a degree in Information Systems with a dual track in Business Analytics and Digitalisation & Cloud Solutions. I'm fueled by a strong passion for data, actively seeking opportunities to expand my experience in the field.
+          A fresh graduate from SMU, holding a degree in Information Systems with a dual track in Business Analytics and Digitalisation & Cloud Solutions. 
         </p>
-        <p class="mt-5">
-          Eager to take on roles in <span :class="{'text-blue font-semibold': isAbout}">data analysis</span>, I'm committed to advancing my skills and contributing to impactful projects.
+        <p class="mt-3">
+          Eager to take on roles in <span :class="{'text-blue font-semibold': true}">infrastructure engineering</span>, I'm committed to advancing my skills and contributing to impactful projects.
+            Infrastructure isn't just backend to me — it's the backbone that makes great products possible!
         </p>
       </div>
       <div class="mt-10">
         <p class="text-purple text-xl font-medium mb-3">Experience</p>
-        <a href="https://www.marinachain.io/" 
+        <div 
           class="grid grid-cols-3 gap-2 p-1 rounded-md"
           :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
         >
@@ -65,10 +66,12 @@
           </div>
           <div class="col-span-2">
               <div class="flex items-center">
-              <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/marinachain_logo.png" alt="">
+              <a href="https://www.marinachain.io/">
+                <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/marinachain_logo.png" alt="">
+              </a>
               <div>
                 <p class="font-semibold">Full Stack Software Engineer Intern</p>
-                <p class="font-medium">MarinaChain</p>
+                <a href="https://www.marinachain.io/" class="font-medium">MarinaChain</a>
               </div>
             </div>
             <ul class="custom-list mt-5 ml-5">
@@ -83,8 +86,8 @@ for a robust password reset mechanism</li>
               <img class="w-[88px]" src="@/assets/icons/postgre.svg" alt="PostgreSQL">
             </div>
           </div>
-        </a>
-        <a href="https://www.hsbc.com/" 
+        </div>
+        <div 
           class="grid grid-cols-3 gap-2 p-1 rounded-md mt-3"
           :class="[isDarkMode ? 'hover:bg-black-50' : 'hover:bg-yellow']"
         >
@@ -93,10 +96,14 @@ for a robust password reset mechanism</li>
           </div>
           <div class="col-span-2">
               <div class="flex items-center">
-              <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hsbc_logo.png" alt="">
+              <a href="https://www.hsbc.com/">
+                <img class="w-12 mr-2 border-2 border-purple rounded-full p-1 shadow-lg shadow-purple" src="@/assets/logos/hsbc_logo.png" alt="">
+              </a>
               <div>
-                <p class="font-semibold">Intern under HOST/COO Office</p>
-                <p class="font-medium">HSBC</p>
+                <p class="font-semibold">Intern under Digital Business Services</p>
+                <a href="https://www.hsbc.com/">
+                  <p class="font-medium">HSBC</p>
+                </a>
               </div>
             </div>
             <ul class="custom-list mt-5 ml-5">
@@ -108,7 +115,7 @@ for a robust password reset mechanism</li>
               <img class="w-[99px]" src="@/assets/icons/confluence.png" alt="Confluence">
             </div>
           </div>
-        </a>
+        </div>
       </div>
       <div class="mt-10">
         <p class="text-purple text-xl font-medium mb-3">Projects</p>
